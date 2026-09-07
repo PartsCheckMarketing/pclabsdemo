@@ -230,8 +230,8 @@ section{ padding:84px 0; }
 .toc-lock span{ font-family:'IBM Plex Mono',Consolas,monospace; font-size:12px; color:var(--mid-grey); letter-spacing:.04em; }
 
 /* ---- trust / methodology (compact) ---- */
-.trust-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:32px 40px; margin-top:8px; }
-.trust-item{ border-top:1px solid var(--hairline); padding-top:16px; }
+.trust-grid{ column-count:2; column-gap:40px; margin-top:8px; }
+.trust-item{ break-inside:avoid; -webkit-column-break-inside:avoid; border-top:1px solid var(--hairline); padding-top:16px; padding-bottom:24px; }
 .trust-item dt{ font-family:'Archivo',sans-serif; font-weight:700; font-size:15.5px; margin-bottom:8px; }
 .trust-item dd{ margin:0; font-size:14.5px; line-height:1.6; color:var(--slate); }
 .trust-note{ margin-top:32px; font-size:13.5px; color:var(--mid-grey); border-left:2px solid var(--hairline); padding-left:16px; max-width:var(--measure); }
@@ -292,7 +292,8 @@ footer .foot-links a:hover{ color:var(--paper); }
   .hero-grid{ grid-template-columns:1fr; gap:40px; }
   .stat-rail{ grid-template-columns:repeat(2,1fr); }
   .terminal-card{ order:-1; }
-  .findings-grid, .trust-grid{ grid-template-columns:1fr; }
+  .findings-grid{ grid-template-columns:1fr; }
+  .trust-grid{ column-count:1; }
   .toc-row{ grid-template-columns:36px 1fr; }
   .toc-arrow{ display:none; }
   .nav-links{ display:none; }
